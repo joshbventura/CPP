@@ -1,0 +1,43 @@
+#include "Lab.h"
+
+Lab::Lab(){}
+
+void StartLab(){
+
+    LabTitle();
+    LoadSubstances();
+
+
+
+}
+
+void Lab::LoadSubstances(){}
+
+    string name, type, formula, substance1, substance2; 
+
+    fstream newFile;
+    
+    newFile.open(PROJ2_DATA);
+
+    for (int i = 0, i < PROJ2_SIZE, i++){
+
+        getline(newFile, name, ',');
+        getline(newFile, type, ',');
+        getline(newFile, formula, ',');
+        getline(newFile, substance1, ',');
+        getline(newFile, substance2 );
+    
+    Substance inst(name, type, formula, sub1, sub2, 0)
+    m_substances[i] = inst;
+
+    }
+    for (int i = 0; i < 283; i++){
+      cout << m_substances[i].m_name << endl;
+      cout << m_substances[i].m_type << endl;
+      cout << m_substances[i].m_formula << endl;
+       cout << m_substances[i].m_substance1 << endl;
+      cout << m_substances[i].m_substance2 << endl;
+       cout << m_substances[i].m_quantity << endl;
+
+    
+    }
